@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Spacing  -->
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_32">32dp</dimen>
+
+    <!--  Font Size  -->
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+    <dimen name="font_size_26">26sp</dimen>
+
+    <!-- Icon Size   -->
+    <dimen name="icon_size_100">100dp</dimen>
+
+    <!--  Width  -->
+    <dimen name="width_size_200">200dp</dimen>
+
+    <!--  Evolution  -->
+    <dimen name="evolution_5">5dp</dimen>
+
+    <!--  Radius  -->
+    <dimen name="radius_24">24dp</dimen>
+
+</resources>

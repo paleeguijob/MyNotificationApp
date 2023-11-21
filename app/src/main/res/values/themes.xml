@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyNotificationApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/yuzu_orange_color</item>
+        <item name="colorPrimaryVariant">@color/yuzu_orange_color</item>
+        <item name="colorOnPrimary">@color/yuzu_orange_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/yuzu_orange_color</item>
+        <item name="colorSecondaryVariant">@color/yuzu_orange_color</item>
+        <item name="colorOnSecondary">@color/yuzu_orange_color</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

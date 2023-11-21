@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyNotificationApp</string>
+
+    <!--  Common Error State  -->
+    <string name="my_notification_common_error_offline_message">Are You Offline</string>
+
+    <!-- My Notification  -->
+    <string name="my_notification_like_text">LIKE</string>
+    <string name="my_notification_follower_text">FOLLOWER</string>
+    <string name="my_notification_follow_text">FOLLOW</string>
+
+</resources>

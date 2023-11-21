@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_layout_wrap_error_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_16"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_error_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:tint="@color/light_gray_color"
+            app:srcCompat="@android:drawable/stat_notify_error" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_description_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/my_notification_common_error_offline_message"
+            android:textSize="@dimen/font_size_26"
+            tools:text="You Are Offline" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/bg_button_radius"
+            android:includeFontPadding="true"
+            android:paddingHorizontal="@dimen/space_24"
+            android:textColor="@color/white"
+            tools:text="TRY AGAIN" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
