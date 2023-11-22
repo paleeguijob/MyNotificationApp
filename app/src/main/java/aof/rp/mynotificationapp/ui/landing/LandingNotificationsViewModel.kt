@@ -10,6 +10,7 @@ import aof.rp.mynotificationapp.domain.usecase.notifications.GetNotificationList
 import aof.rp.mynotificationapp.domain.usecase.userprofile.GetUserProfileUseCase
 import aof.rp.mynotificationapp.ui.landing.uimodel.LandingNotificationsUi
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

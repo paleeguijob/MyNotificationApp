@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class GetUserProfileUseCase @Inject constructor(
     private val repository: MyNotificationRepository
-) : BaseSuspendUseCase<Unit, UserProfile>(){
+) : BaseSuspendUseCase<Unit, UserProfile>() {
 
     override suspend fun create(input: Unit): UserProfile =
         repository.getUserProfile()

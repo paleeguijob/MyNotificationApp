@@ -1,11 +1,16 @@
 package aof.rp.mynotificationapp.ui.landing
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import aof.rp.mynotificationapp.R
+import aof.rp.mynotificationapp.base.customview.error.model.ErrorStateUi
+import aof.rp.mynotificationapp.base.extensions.gone
+import aof.rp.mynotificationapp.base.extensions.visible
 import aof.rp.mynotificationapp.databinding.LandingNotificationsFragmentBinding
 import aof.rp.mynotificationapp.ui.landing.adapter.LandingNotificationAdapter
 import aof.rp.mynotificationapp.ui.landing.uimodel.LandingNotificationsUi
@@ -52,6 +57,7 @@ class LandingNotificationsFragment : Fragment() {
         when (uiModel.uiState) {
             is LandingNotificationsUi.UiState.Error -> {
                 hideLoading()
+                contentGone()
                 setViewErrorState()
             }
 
@@ -85,27 +91,41 @@ class LandingNotificationsFragment : Fragment() {
 
     private fun loading() {
         with(binding) {
-            progressCircularLoading.visibility = View.VISIBLE
-            recyclerViewNotificationList.visibility = View.GONE
-            headerContentNotification.visibility = View.GONE
+            progressCircularLoading.visible()
+            recyclerViewNotificationList.gone()
+            headerContentNotification.gone()
+            errorStateContentError.gone()
         }
     }
 
     private fun hideLoading() {
         with(binding) {
-            progressCircularLoading.visibility = View.GONE
-            recyclerViewNotificationList.visibility = View.VISIBLE
-            headerContentNotification.visibility = View.VISIBLE
+            progressCircularLoading.gone()
+            recyclerViewNotificationList.visible()
+            headerContentNotification.visible()
         }
     }
 
+    @SuppressLint("PrivateResource")
     private fun setViewErrorState() {
-        with(binding.viewErrorState) {
-            root.visibility = View.VISIBLE
+        with(binding.errorStateContentError) {
+            visible()
 
-            buttonTryAgain.setOnClickListener {
-                viewModel.fetchUserId()
-            }
+            setView(
+                errorStateUi = ErrorStateUi(
+                    alertIcon = android.R.drawable.ic_dialog_alert,
+                    message = getString(R.string.my_notification_common_error_offline_message),
+                    buttonText = getString(R.string.my_notification_common_try_again_button),
+                    onClickedButton = { viewModel.fetchUserId() }
+                )
+            )
+        }
+    }
+
+    private fun contentGone() {
+        with(binding) {
+            recyclerViewNotificationList.gone()
+            headerContentNotification.gone()
         }
     }
 }

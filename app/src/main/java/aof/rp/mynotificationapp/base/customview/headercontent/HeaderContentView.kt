@@ -1,4 +1,4 @@
-package aof.rp.mynotificationapp.base.customview
+package aof.rp.mynotificationapp.base.customview.headercontent
 
 import android.content.Context
 import android.util.AttributeSet

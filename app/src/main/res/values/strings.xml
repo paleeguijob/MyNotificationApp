@@ -3,6 +3,7 @@
 
     <!--  Common Error State  -->
     <string name="my_notification_common_error_offline_message">Are You Offline</string>
+    <string name="my_notification_common_try_again_button">TRY AGAIN</string>
 
     <!-- My Notification  -->
     <string name="my_notification_like_text">LIKE</string>

@@ -19,14 +19,14 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_view_error_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/icon_size_150"
+            android:layout_height="@dimen/icon_size_150"
             android:scaleType="centerCrop"
             android:tint="@color/light_gray_color"
             app:srcCompat="@android:drawable/stat_notify_error" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_view_description_error"
+            android:id="@+id/text_view_message_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_16"
@@ -43,8 +43,10 @@
             android:background="@drawable/bg_button_radius"
             android:includeFontPadding="true"
             android:paddingHorizontal="@dimen/space_24"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/my_notification_common_try_again_button"
             android:textColor="@color/white"
-            tools:text="TRY AGAIN" />
+            tools:text="@string/my_notification_common_try_again_button" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
